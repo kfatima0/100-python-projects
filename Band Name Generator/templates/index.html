@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Band Name Generator</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="terminal">
+            <p>Click <strong>Run</strong> to run the final project you will build.</p>
+            <form method="POST">
+                <label for="pet_name">What's your pet's name?</label><br>
+                <input type="text" id="pet_name" name="pet_name" autofocus><br><br>
+                <button type="submit">Run</button>
+            </form>
+            {% if band_name %}
+                <p>Your band name could be <strong>{{ band_name }}</strong></p>
+            {% endif %}
+        </div>
+    </body>
+    
+    
+</html>
